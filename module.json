@@ -3,12 +3,12 @@
 	"name": "token-auras",
 	"title": "Token Auras",
 	"description": "Provide options for configuring token auras.",
-	"version": "2.7",
+	"version": "2.7.1",
 	"minimumCoreVersion": "10",
-	"compatibleCoreVersion": "11",
+	"compatibleCoreVersion": "12",
 	"compatibility": {
 		"minimum": 10,
-		"verified": 11
+		"verified": 12
 	},
 	"authors": [{"name": "Kim Mantas"}],
 	"scripts": ["main.js"],
