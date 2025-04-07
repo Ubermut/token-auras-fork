@@ -190,6 +190,6 @@ Hooks.on('drawToken', Auras.drawAuras);
 Hooks.on('refreshToken', Auras.onRefreshToken);
 Hooks.on('updateToken', Auras.onUpdateToken);
 Hooks.on('drawGridLayer', layer => {
-	layer.tokenAuras = layer.addChildAt(new PIXI.Container(), layer.getChildIndex(layer.borders));
+	canvas.grid.tokenAuras = layer.addChildAt(new PIXI.Container(), 0);
 });
 Hooks.on('destroyToken', token => token.tokenAuras?.destroy());
