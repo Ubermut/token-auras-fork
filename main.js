@@ -143,7 +143,7 @@ const Auras = {
 
 		if ( !auras.length ) return;
 
-		token.tokenAuras ??= canvas.grid.tokenAuras.addChild(new PIXI.Container());
+		token.tokenAuras ??= canvas.tokenAuras.addChild(new PIXI.Container());
 		const gfx = token.tokenAuras.addChild(new PIXI.Graphics());
 		const squareGrid = canvas.scene.grid.type === 1;
 		const dim = canvas.dimensions;
@@ -190,6 +190,6 @@ Hooks.on('drawToken', Auras.drawAuras);
 Hooks.on('refreshToken', Auras.onRefreshToken);
 Hooks.on('updateToken', Auras.onUpdateToken);
 Hooks.on('drawGridLayer', layer => {
-	canvas.grid.tokenAuras = layer.addChildAt(new PIXI.Container(), 0);
+	canvas.tokenAuras = layer.addChildAt(new PIXI.Container(), 0);
 });
 Hooks.on('destroyToken', token => token.tokenAuras?.destroy());
